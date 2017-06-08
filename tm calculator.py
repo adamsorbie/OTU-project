@@ -41,5 +41,16 @@ gc__R = (no_G_R + no_C_R)
 gc_content_R = float(gc__R) / reverse_length * 100
 print("Reverse GC content: " + str(gc_content_R) + "%")
 
+if tmF - tmR > 5:
+    print("Tm difference is greater than recommended limit of 5C.")
+
+if tmF < tmR:
+    ta_l = tmF - 5
+    ta_u = tmF - 3
+    print("Annealing temp range:" + str(ta_l) + "-" + str(ta_u))
+elif tmR < tmF:
+    ta_l = tmR - 5
+    ta_u = tmR - 3
+    print("Annealing temp range: " + str(ta_l) + "-" + str(ta_u))
 
 exit() 

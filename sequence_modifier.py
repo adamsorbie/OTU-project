@@ -13,3 +13,5 @@ def all_in_one(sequence):
     print(translated)
 
 all_in_one(sequence)
+
+exit() 
